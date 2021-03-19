@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>individual data</title>
+    <link rel="stylesheet" type="text/css"   href="/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: rgba(210, 105, 30, 0.13);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">BANKING SYSTEM (SPARKS PROJECT)</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                       
+                        <li><a href="amountForm">TRANSFR</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="individualdata">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+              <div class='panel panel-danger'>
+                  <div class="panel-heading">
+                      <h1>RECEIVER'S DATA</h1>
+                  </div>
+                  <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th> ACCOUNT_NO.</th>
+                                <th> AMOUNT</th>
+                               
+                            </tr>
+                        </thead>
+                        
+                            <% records.forEach(function(element){%>
+                        <tr>
+                            <td><%= element.name %></td>
+                            <td><%= element.account_number %></td>
+                            <td><%= element.amount %></td>
+                           
+                        </tr>
+                            <% }) %>
+                    </table>
+                  </div>
+              </div>  
+            </div>
+            </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <center>
+                            <h2>CLICK ON TRANSFER TO TRANSFER MONEY </h2>
+                        </center>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

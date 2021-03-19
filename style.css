@@ -1,0 +1,44 @@
+body{
+    background: rgba(210, 153, 30, 0.884);
+}
+
+#welcome{
+    color:rgba(255, 0, 0, 0.63);
+    font-weight: 400%;
+    margin-top: 60px;
+  background-color: rgba(63, 165, 42, 0.678);
+}
+#about{
+    margin-top: 30px;
+}
+
+#individualdata{
+    margin-top: 70px;
+}
+
+#customersContainer{
+    margin-top: 70px;
+   background-image: url('page 4.JPG');
+}
+
+#amountContainer{
+    margin-top: 70px;
+}
+
+#titleParah{
+    color:green;
+    font-weight:bold;
+    font-size: 300%;
+}
+
+#mainhead{
+    color:rgba(255, 0, 0, 0.555);
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.subhead{
+    color:brown;
+    font-size: 150%;
+    font-weight: bold;
+}

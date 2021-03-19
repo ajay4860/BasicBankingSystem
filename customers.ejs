@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL CUSTOMERS</title>
+    <link rel="stylesheet" type="text/css"   href="/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        body {
+            background-color: rgba(153, 160, 95, 0.514);
+            background-image: url('page 4.JPG');
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">BANKING SYSTEM (SPARKS PROJECT)</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                       
+                        <li><a href="/">HOME</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id='customersContainer'>
+        <div class="row">
+            <div class="col-xs-6">
+              <div class='panel panel-danger'>
+                  <div class="panel-heading">
+                      <h1>MEMBER'S DATA</h1>
+                  </div>
+                  <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th> ACCOUNT_NO.</th>
+                                <th> AMOUNT</th>
+                               
+                            </tr>
+                        </thead>
+                        
+                            <% records.forEach(function(element){%>
+                        <tr>
+                            <td><%= element.name %></td>
+                            <td><%= element.account_number %></td>
+                            <td><%= element.amount %></td>
+                           
+                        </tr>
+                            <% }) %>
+                    </table>
+                  </div>
+              </div>  
+            </div>
+            <div class="col-xs-5">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h1>SELECT AN INDIVIDUAL TO VIEW</h1>
+                    </div>
+                    <div class="panel-body">
+                        <form action="/customers" method='post'>
+                            <div class="form-group">
+                                <p>ENTER THE NAME OF THE INDIVIDUAL</p>
+                                <input type="text" name='name' placeholder="enter here" class="form-control">
+                            </div>
+                            <div class='form-group'>
+                                <p>ENTER THE ACCOUNT_NO. OF THE INDIVIDUAL</p>
+                                <input type="text" name='account_number' class='form-control' placeholder="enter here">
+                            </div>
+                            <div class='form-group'>
+                                <button type='submit' class="form-control btn btn-primary">VIEW</button> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <p id='titleParah'><%=title %></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

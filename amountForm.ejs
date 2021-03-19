@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amount enter</title>
+    <link rel="stylesheet" type="text/css"   href="/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <style>
+        body {
+            background-color: rgba(184, 135, 11, 0.301);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">BANKING SYSTEM (SPARKS PROJECT)</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                       
+                        <li><a href="/">HOME</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="amountContainer">
+        <div class="row">
+            <div class="col-xs-8-co-xs-offset-2">
+               <div class="panel panel-primary">
+                   <div class='panel-heading'>
+                       <h1> TRANSACTION </h1>
+                   </div>
+                   <div class="panel-body">
+                       <form action='/amountForm' method='post'>
+                          <div class="form-group">
+                              <p>enter the amount to transfer</p>
+                              <input type="number" name='amount' class="form-control" placeholder="enter here">
+                          </div>
+                          <div class="form-group">
+                              <p>enter the account number of the receiver</p>
+                              <input type='text' class="form-control" name="account_number" placeholder="enter here">
+                          </div>
+                          <div class="form-group">
+                              <p>enter the sender's name</p>
+                              <input type='text' class="form-control" placeholder="enter the text here" name='name'>
+                          </div>
+                          <div class="form-group">
+                              <button type="submit" class="btn btn-primary">TRANSFER</button>
+                          </div>
+                       </form>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
